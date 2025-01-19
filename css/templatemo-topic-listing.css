@@ -179,6 +179,7 @@ strong {
   justify-content: center;
 }
 
+
 .nav-tabs .nav-link {
   border-radius: 0;
   border-top: 0;
@@ -1160,3 +1161,8 @@ blockquote {
   }
 }
 
+.portrait-image {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+}
