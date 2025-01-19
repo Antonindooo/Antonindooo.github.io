@@ -7,7 +7,9 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Topic Listing Contact Page</title>
+        <title>MProNutri</title>
+        
+        <link rel="icon" href="clipboard2-heart.svg" type="image/svg">
 
         <!-- CSS FILES -->        
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,16 +31,41 @@ https://templatemo.com/tm-590-topic-listing
 
 -->
     </head>
-    
+
     <body class="topics-listing-page" id="top">
 
         <main>
+            <!-- Conteneur pour le footer -->
+            <div id="footer-container"></div>
 
+            <!-- Script pour charger dynamiquement le header et le footer -->
+            <script>
+                // Charger dynamiquement le contenu du header_footer.html
+                fetch('header_footer.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error("Erreur de chargement");
+                        return response.text();
+                    })
+                    .then(data => {
+                        // Insérer le contenu dans les conteneurs
+                        const tempDiv = document.createElement('div');
+                        tempDiv.innerHTML = data;
+
+                        // Séparer le nav et le footer si nécessaire
+                        const nav = tempDiv.querySelector('nav');
+                        const footer = tempDiv.querySelector('footer');
+
+                        document.getElementById('navbar-container').appendChild(nav);
+                        document.getElementById('footer-container').appendChild(footer);
+                    })
+                    .catch(error => console.error('Erreur lors du chargement :', error));
+            </script>
+            <!--
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
                     <a class="navbar-brand" href="index.html">
-                        <i class="bi-back"></i>
-                        <span>Topic</span>
+                        <i class="bi bi-clipboard-heart"></i>
+                        <span>MProNutri</span>
                     </a>
 
                     <div class="d-lg-none ms-auto me-4">
@@ -52,19 +79,11 @@ https://templatemo.com/tm-590-topic-listing
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-lg-5 me-lg-auto">
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="index.html#section_1">Home</a>
+                                <a class="nav-link click-scroll" href="index.html">Accueil</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="index.html#section_2">Browse Topics</a>
-                            </li>
-    
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="index.html#section_3">How it works</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="index.html#section_4">FAQs</a>
+                                <a class="nav-link click-scroll" href="topics-detail.html">À propos</a>
                             </li>
     
                             <li class="nav-item">
@@ -80,14 +99,16 @@ https://templatemo.com/tm-590-topic-listing
                                     <li><a class="dropdown-item active" href="contact.html">Contact Form</a></li>
                                 </ul>
                             </li>
+
                         </ul>
 
                         <div class="d-none d-lg-block">
-                            <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                            // <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                            <a href="https://www.mynutriconsult.com/fr/annuaire-des-praticiens/details-praticien/marie-pierre-doat/" class="btn custom-btn mt-2 mt-lg-3">Prendre RDV</a>
                         </div>
                     </div>
                 </div>
-            </nav>
+            </nav>-->
 
 
             <header class="site-header d-flex flex-column justify-content-center align-items-center">
@@ -95,15 +116,15 @@ https://templatemo.com/tm-590-topic-listing
                     <div class="row align-items-center">
 
                         <div class="col-lg-5 col-12">
-                            <nav aria-label="breadcrumb">
+                            <!-- <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Homepage</a></li>
+                                    <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
 
                                     <li class="breadcrumb-item active" aria-current="page">Contact Form</li>
                                 </ol>
-                            </nav>
+                            </nav> -->
 
-                            <h2 class="text-white">Contact Form</h2>
+                            <h2 class="text-white">Accueil</h2>
                         </div>
 
                     </div>
@@ -170,6 +191,80 @@ https://templatemo.com/tm-590-topic-listing
 
                     </div>
                 </div>
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12">
+                            <h3 class="mb-4">Avis client</h3>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-12 mt-3 mb-4 mb-lg-0">
+                            <div class="custom-block bg-white shadow-lg">
+                                <a href="topics-detail.html">
+                                    <div class="d-flex">
+                                        <div>
+                                            <h5 class="mb-2">Marie-Charlotte</h5>
+                                            <br>
+                                            <p class="mb-0">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint animi necessitatibus aperiam repudiandae nam omnis"</p>
+                                        </div>
+
+                                        <!-- <span class="badge bg-finance rounded-pill ms-auto">30</span> -->
+                                    </div>
+
+                                    <!-- <img src="images/topics/undraw_Finance_re_gnv2.png" class="custom-block-image img-fluid" alt=""> -->
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-12 mt-lg-3">
+                            <div class="custom-block custom-block-overlay">
+                                <div class="d-flex flex-column h-100">
+                                    <img src="images/businesswoman-using-tablet-analysis.jpg" class="custom-block-image img-fluid" alt="">
+
+                                    <div class="custom-block-overlay-text d-flex">
+                                        <div>
+                                            <h5 class="text-white mb-2">Esteven</h5>
+
+                                            <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint animi necessitatibus aperiam repudiandae nam omnis</p>
+                                        </div>
+
+                                        <span class="badge bg-finance rounded-pill ms-auto">25</span>
+                                    </div>
+
+                                    <div class="social-share d-flex">
+                                        <p class="text-white me-4">Share:</p>
+
+                                        <ul class="social-icon">
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-twitter"></a>
+                                            </li>
+
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-facebook"></a>
+                                            </li>
+
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-pinterest"></a>
+                                            </li>
+                                        </ul>
+
+                                        <a href="#" class="custom-icon bi-bookmark ms-auto"></a>
+                                    </div>
+
+                                    <div class="section-overlay"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+                
+                <div class="button-container">
+                    <a href="https://maps.app.goo.gl/mCYVMtb8L4hzkaMr7" class="btn custom-btn mt-2 mt-lg-3">Voir d'autres avis</a>
+                </div>
+                
+                <a href="https://www.mynutriconsult.com/fr/annuaire-des-praticiens/details-praticien/marie-pierre-doat/" class="btn custom-btn mt-2 mt-lg-3">Prendre RDV</a>
             </section>
         </main>
 
@@ -179,8 +274,8 @@ https://templatemo.com/tm-590-topic-listing
 
                     <div class="col-lg-3 col-12 mb-4 pb-2">
                         <a class="navbar-brand mb-2" href="index.html">
-                            <i class="bi-back"></i>
-                            <span>Topic</span>
+                            <i class="bi bi-clipboard-heart"></i>
+                            <span>MProNutri</span>
                         </a>
                     </div>
 
@@ -189,20 +284,20 @@ https://templatemo.com/tm-590-topic-listing
 
                         <ul class="site-footer-links">
                             <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Home</a>
+                                <a href="#" class="site-footer-link">Accueil</a>
                             </li>
 
                             <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">How it works</a>
+                                <a href="topics-detail.html" class="site-footer-link">À propos</a>
                             </li>
 
                             <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">FAQs</a>
+                                <a href="index.html#section_3" class="site-footer-link">Contact</a>
                             </li>
 
-                            <li class="site-footer-link-item">
+                            <!-- <li class="site-footer-link-item">
                                 <a href="#" class="site-footer-link">Contact</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
 
@@ -210,32 +305,19 @@ https://templatemo.com/tm-590-topic-listing
                         <h6 class="site-footer-title mb-3">Information</h6>
 
                         <p class="text-white d-flex mb-1">
-                            <a href="tel: 305-240-9671" class="site-footer-link">
-                                305-240-9671
+                            <a href="06 20 59 38 05" class="site-footer-link">
+                                06 20 59 38 05
                             </a>
                         </p>
 
                         <p class="text-white d-flex">
-                            <a href="mailto:info@company.com" class="site-footer-link">
-                                info@company.com
+                            <a href="mpronutri@orange.fr" class="site-footer-link">
+                                mpronutri@orange.fr
                             </a>
                         </p>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            English</button>
-
-                            <ul class="dropdown-menu">
-                                <li><button class="dropdown-item" type="button">Thai</button></li>
-
-                                <li><button class="dropdown-item" type="button">Myanmar</button></li>
-
-                                <li><button class="dropdown-item" type="button">Arabic</button></li>
-                            </ul>
-                        </div>
-
                         <p class="copyright-text mt-lg-5 mt-4">Copyright © 2048 Topic Listing Center. All rights reserved.
                         <br><br>Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
                         

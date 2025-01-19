@@ -156,6 +156,13 @@ strong {
   height: 100%;
   opacity: 0.85;
 }
+.button-container {
+  display: flex; /* Utilise flexbox pour un alignement facile */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  height: 100; /* Ajustez la hauteur selon vos besoins */
+  text-align: center;
+}
 
 .section-overlay + .container {
   position: relative;
