@@ -36,31 +36,8 @@ https://templatemo.com/tm-590-topic-listing
 
         <main>
             <!-- Conteneur pour le footer -->
-            <div id="footer-container"></div>
 
-            <!-- Script pour charger dynamiquement le header et le footer -->
-            <script>
-                // Charger dynamiquement le contenu du header_footer.html
-                fetch('header_footer.html')
-                    .then(response => {
-                        if (!response.ok) throw new Error("Erreur de chargement");
-                        return response.text();
-                    })
-                    .then(data => {
-                        // Insérer le contenu dans les conteneurs
-                        const tempDiv = document.createElement('div');
-                        tempDiv.innerHTML = data;
-
-                        // Séparer le nav et le footer si nécessaire
-                        const nav = tempDiv.querySelector('nav');
-                        const footer = tempDiv.querySelector('footer');
-
-                        document.getElementById('navbar-container').appendChild(nav);
-                        document.getElementById('footer-container').appendChild(footer);
-                    })
-                    .catch(error => console.error('Erreur lors du chargement :', error));
-            </script>
-            <!--
+            
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
                     <a class="navbar-brand" href="index.html">
@@ -108,7 +85,7 @@ https://templatemo.com/tm-590-topic-listing
                         </div>
                     </div>
                 </div>
-            </nav>-->
+            </nav>
 
 
             <header class="site-header d-flex flex-column justify-content-center align-items-center">
