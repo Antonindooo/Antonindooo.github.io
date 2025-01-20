@@ -74,8 +74,8 @@ https://templatemo.com/tm-590-topic-listing
             </nav>
 
 
-<!-- Le header et la navigation restent identiques -->
 
+            <!-- Section Header -->
             <header class="site-header d-flex flex-column justify-content-center align-items-center">
                 <div class="container">
                     <div class="row align-items-center">
@@ -87,56 +87,75 @@ https://templatemo.com/tm-590-topic-listing
             </header>
 
             <!-- Section Contact -->
-            <section class="section-padding section-bg">
+            <section class="section-padding">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12 col-12">
-                            <h3 class="mb-4">Contactez-moi</h3>
-                        </div>
-
                         <!-- Informations de contact -->
-                        <div class="col-lg-6 col-12 mb-4 mb-lg-0">
-                            <div class="custom-block bg-white shadow-lg">
-                                <div class="p-5">
-                                    <h5 class="mb-4">Mes coordonnées</h5>
-                                    
-                                    <div class="d-flex align-items-center mb-3">
-                                        <i class="bi bi-telephone me-3"></i>
-                                        <a href="tel:0620593805" class="site-footer-link">06 20 59 38 05</a>
+                        <div class="col-lg-5 col-12 mb-4 mb-lg-0">
+                            <div class="custom-block bg-white shadow-lg p-5">
+                                <h3 class="mb-4">Mes coordonnées</h3>
+                                
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="custom-icon-wrap me-4">
+                                        <i class="bi bi-telephone" style="font-size: 2rem; color: var(--primary-color);"></i>
                                     </div>
-                                    
-                                    <div class="d-flex align-items-center mb-3">
-                                        <i class="bi bi-envelope me-3"></i>
-                                        <a href="mailto:mpronutri@orange.fr" class="site-footer-link">mpronutri@orange.fr</a>
-                                    </div>
-
-                                    <h5 class="mt-5 mb-4">Mes horaires</h5>
-                                    <p>À personnaliser : Vos horaires de disponibilité...</p>
-
-                                    <div class="mt-5">
-                                        <a href="https://www.mynutriconsult.com/fr/annuaire-des-praticiens/details-praticien/marie-pierre-doat/" class="btn custom-btn">Prendre RDV</a>
+                                    <div>
+                                        <p class="mb-0">Téléphone</p>
+                                        <h5 class="mb-0">
+                                            <a href="tel:0620593805" class="custom-link">06 20 59 38 05</a>
+                                        </h5>
                                     </div>
                                 </div>
+
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="custom-icon-wrap me-4">
+                                        <i class="bi bi-envelope" style="font-size: 2rem; color: var(--primary-color);"></i>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0">Email</p>
+                                        <h5 class="mb-0">
+                                            <a href="mailto:mpronutri@orange.fr" class="custom-link">mpronutri@orange.fr</a>
+                                        </h5>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h4 class="mb-3">Horaires</h4>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="bi bi-clock me-2"></i>Lundi - Vendredi : 8h - 20h</li>
+                                        <li><i class="bi bi-clock me-2"></i>Samedi : 9h - 17h</li>
+                                    </ul>
+                                </div>
+
+                                <a href="https://www.mynutriconsult.com/fr/annuaire-des-praticiens/details-praticien/marie-pierre-doat/" class="btn custom-btn">
+                                    <i class="bi bi-calendar-check me-2"></i>Prendre RDV
+                                </a>
                             </div>
                         </div>
 
-                        <!-- Formulaire de contact -->
-                        <div class="col-lg-6 col-12">
-                            <div class="custom-block bg-white shadow-lg">
-                                <div class="p-5">
-                                    <form action="#" method="post" class="custom-form contact-form">
-                                        <div class="form-floating mb-4">
+                        <!-- Formulaire avec Formspree intégré -->
+                        <div class="custom-block bg-white shadow-lg p-5">
+                            <h3 class="mb-4">Envoyez-moi un message</h3>
+                            
+                            <form action="https://formspree.io/f/meooyaor" method="POST" class="custom-form">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-12 mb-4">
+                                        <div class="form-floating">
                                             <input type="text" name="name" id="name" class="form-control" placeholder="Nom" required>
                                             <label for="name">Nom</label>
                                         </div>
+                                    </div>
 
-                                        <div class="form-floating mb-4">
+                                    <div class="col-lg-6 col-md-6 col-12 mb-4">
+                                        <div class="form-floating">
                                             <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email" required>
                                             <label for="email">Email</label>
                                         </div>
+                                    </div>
 
-                                        <div class="form-floating mb-4">
-                                            <select class="form-select" id="subject" name="subject">
+                                    <div class="col-12 mb-4">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="subject" name="subject" required>
                                                 <option value="" selected disabled>Choisissez...</option>
                                                 <option value="rdv">Prise de rendez-vous</option>
                                                 <option value="info">Demande d'informations</option>
@@ -144,39 +163,43 @@ https://templatemo.com/tm-590-topic-listing
                                             </select>
                                             <label for="subject">Sujet</label>
                                         </div>
+                                    </div>
 
-                                        <div class="form-floating mb-4">
-                                            <textarea class="form-control" id="message" name="message" placeholder="Message" style="height: 160px"></textarea>
+                                    <div class="col-12 mb-4">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" id="message" name="message" placeholder="Message" style="height: 160px; border-radius: 4px;" required></textarea>
                                             <label for="message">Message</label>
                                         </div>
+                                    </div>
 
-                                        <button type="submit" class="btn custom-btn w-100">Envoyer</button>
-                                    </form>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn custom-btn w-100">Envoyer le message</button>
+                                    </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- FAQ Section -->
-            <section class="section-padding">
+            <!-- Section FAQ -->
+            <section class="section-padding section-bg">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 col-12 mx-auto">
-                            <h3 class="mb-4">Questions fréquentes</h3>
+                            <h3 class="text-center mb-5">Questions fréquentes</h3>
 
-                            <div class="accordion" id="accordionFAQ">
+                            <div class="accordion" id="faqAccordion">
                                 <!-- Question 1 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
                                             Comment se déroule une consultation en visio ?
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
+                                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            À personnaliser : Expliquez le déroulement d'une consultation...
+                                            À personnaliser avec votre explication...
                                         </div>
                                     </div>
                                 </div>
@@ -184,13 +207,13 @@ https://templatemo.com/tm-590-topic-listing
                                 <!-- Question 2 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
                                             Quels sont vos tarifs ?
                                         </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            À personnaliser : Vos tarifs et modalités de paiement...
+                                            À personnaliser avec vos tarifs...
                                         </div>
                                     </div>
                                 </div>
@@ -198,13 +221,13 @@ https://templatemo.com/tm-590-topic-listing
                                 <!-- Question 3 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
                                             Quelle est la fréquence des rendez-vous ?
                                         </button>
                                     </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
-                                            À personnaliser : La fréquence habituelle des rendez-vous...
+                                            À personnaliser avec vos explications...
                                         </div>
                                     </div>
                                 </div>
