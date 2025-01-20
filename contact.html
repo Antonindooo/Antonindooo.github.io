@@ -89,10 +89,10 @@ https://templatemo.com/tm-590-topic-listing
             <!-- Section Contact -->
             <section class="section-padding">
                 <div class="container">
-                    <div class="row">
+                    <div class="row gy-5">
                         <!-- Informations de contact -->
-                        <div class="col-lg-5 col-12 mb-4 mb-lg-0">
-                            <div class="custom-block bg-white shadow-lg p-5">
+                        <div class="col-lg-5 col-12">
+                            <div class="custom-block bg-white shadow-lg p-5 h-100">
                                 <h3 class="mb-4">Mes coordonnées</h3>
                                 
                                 <div class="d-flex align-items-center mb-4">
@@ -134,53 +134,56 @@ https://templatemo.com/tm-590-topic-listing
                         </div>
 
                         <!-- Formulaire avec Formspree intégré -->
-                        <div class="custom-block bg-white shadow-lg p-5">
-                            <h3 class="mb-4">Envoyez-moi un message</h3>
-                            
-                            <form action="https://formspree.io/f/meooyaor" method="POST" class="custom-form">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-12 mb-4">
-                                        <div class="form-floating">
-                                            <input type="text" name="name" id="name" class="form-control" placeholder="Nom" required>
-                                            <label for="name">Nom</label>
+                        <div class="col-lg-7 col-12">
+                            <div class="custom-block bg-white shadow-lg p-5 h-100">
+                                <h3 class="mb-4">Envoyez-moi un message</h3>
+                                
+                                <form action="https://formspree.io/f/meooyaor" method="POST" class="custom-form">
+                                    <div class="row gy-4">
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="form-floating">
+                                                <input type="text" name="name" id="name" class="form-control" placeholder="Nom" required>
+                                                <label for="name">Nom</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="form-floating">
+                                                <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email" required>
+                                                <label for="email">Email</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <select class="form-select" id="subject" name="subject" required>
+                                                    <option value="" selected disabled>Choisissez...</option>
+                                                    <option value="rdv">Prise de rendez-vous</option>
+                                                    <option value="info">Demande d'informations</option>
+                                                    <option value="autre">Autre</option>
+                                                </select>
+                                                <label for="subject">Sujet</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <textarea class="form-control" id="message" name="message" placeholder="Message" style="height: 160px;" required></textarea>
+                                                <label for="message">Message</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <button type="submit" class="btn custom-btn w-100">Envoyer le message</button>
                                         </div>
                                     </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 mb-4">
-                                        <div class="form-floating">
-                                            <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email" required>
-                                            <label for="email">Email</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12 mb-4">
-                                        <div class="form-floating">
-                                            <select class="form-select" id="subject" name="subject" required>
-                                                <option value="" selected disabled>Choisissez...</option>
-                                                <option value="rdv">Prise de rendez-vous</option>
-                                                <option value="info">Demande d'informations</option>
-                                                <option value="autre">Autre</option>
-                                            </select>
-                                            <label for="subject">Sujet</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12 mb-4">
-                                        <div class="form-floating">
-                                            <textarea class="form-control" id="message" name="message" placeholder="Message" style="height: 160px; border-radius: 4px;" required></textarea>
-                                            <label for="message">Message</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <button type="submit" class="btn custom-btn w-100">Envoyer le message</button>
-                                    </div>
-                                </div>
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
+
 
             <!-- Section FAQ -->
             <section class="section-padding section-bg">
